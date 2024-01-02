@@ -91,7 +91,7 @@ function App() {
 	return (
 		<div className='App'>
 			<div>
-				<h1>Simplest Working Calculator</h1>
+				<h1>Idyllic Wellness Online - Calculator</h1>
 			</div>
 			<form>
 				<p ref={resultRef}>
