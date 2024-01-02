@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 /**
  * Main component for the calculator app.
