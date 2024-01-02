@@ -14,7 +14,7 @@ input {
 button {
     border: 1px solid gray;
     background: whitesmoke;
-    margin-right: 5px;
+    margin: 5px;
 }
 button:nth-last-child(2),
 button:nth-last-child(1) {
@@ -26,6 +26,10 @@ h1 {
     text-align: center;
 }
 div {
-    margin-bottom: 20px;
+    margin: 20px;
     text-align: center;
+}
+input {
+    align-items: center;
+    margin: 0 auto;
 }

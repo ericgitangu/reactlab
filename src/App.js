@@ -127,25 +127,25 @@ function App() {
 				<button
 					// @ts-ignore
 					onClick={plus}>
-					add
+					+
 				</button>
 				{/* Add the subtract button */}
 				<button
 					// @ts-ignore
 					onClick={minus}>
-					subtract
+					-
 				</button>
 				{/* Add the multiply button */}
 				<button
 					// @ts-ignore
 					onClick={times}>
-					multiply
+					x
 				</button>
 				{/* Add the divide button */}
 				<button
 					// @ts-ignore
 					onClick={divide}>
-					divide
+					/
 				</button>
 				{/* Add the resetInput button */}
         <br/>
