@@ -112,7 +112,13 @@ function App() {
 			<form>
 				<p ref={resultRef}>
 					{/* add the value of the current total */}
-					Return (anticipted revenue) p/m: {result}
+					Return (anticipted revenue) p/m:{' '}
+					{result.toLocaleString('en-US', {
+						style: 'currency',
+						currency: 'KES',
+						minimumFractionDigits: 2,
+						maximumFractionDigits: 2,
+					})}
 				</p>
 				<p>
 					{/* add the value of the current total monthly*/}
