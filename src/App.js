@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
+import { toast } from 'react-toastify';
 
 /**
  * Main component for the calculator app.
@@ -12,6 +13,7 @@ function App() {
 	const inputRef = useRef(null);
 	const resultRef = useRef(null);
 	const [result, setResult] = useState(0);
+  const [overhead, setOverHead] = useState(400000);
 
 	useEffect(() => {
 		// @ts-ignore
@@ -76,6 +78,9 @@ function App() {
 		if (inputRef.current) {
 			// @ts-ignore
 			inputRef.current.value = '0';
+      if(result > overhead){
+        toast.success("We are in the green! Let's get started!")
+      }
 		}
 	}
 
@@ -97,8 +102,12 @@ function App() {
 			<form>
 				<p ref={resultRef}>
 					{/* add the value of the current total */}
-					Result: {result}
+					Return (anticipted revenue) p/m: {result}
 				</p>
+        <p>
+          {/* add the value of the current total monthly*/}
+          Return (anticipted overhead - worst case scenario) p/m: {overhead}
+        </p>
 				<input
 					pattern='[0-9]'
 					ref={inputRef}
