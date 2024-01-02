@@ -11,12 +11,14 @@ function App() {
  
   function plus(e) { 
     e.preventDefault(); 
-    setResult((result) => result + Number(inputRef.current.value)); 
+    setResult((result) => result + Number(inputRef.current.value));
+    resetInput(e)
   }; 
  
   function minus(e) { 
   	e.preventDefault(); 
-    setResult((result) => result - Number(inputRef.current.value)); 
+    setResult((result) => result - Number(inputRef.current.value));
+    resetInput(e)
   };
  
   function times(e) { 
@@ -24,7 +26,8 @@ function App() {
     if (result === 0) {
       setResult(1);
     }
-    setResult((result) => result * Number(inputRef.current.value));  
+    setResult((result) => result * Number(inputRef.current.value));
+    resetInput(e);
   }; 
  
   function divide(e) { 
@@ -34,6 +37,8 @@ function App() {
     } catch (err) {
       console.error(err)
       setResult(0)
+    } finally {
+      resetInput(e);
     }
   };
  
