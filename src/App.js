@@ -113,7 +113,7 @@ function App() {
 				<p ref={resultRef}>
           <strong>
 					{/* add the value of the current total */}
-					Tota (anticipted revenue) p/m:{' '}
+					Total (anticipted revenue) p/m:{' '} <br/>
 					{result.toLocaleString('en-US', {
 						style: 'currency',
 						currency: 'KES',
