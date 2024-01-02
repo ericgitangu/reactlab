@@ -96,7 +96,7 @@ function App() {
 	return (
 		<div className='App'>
 			<div>
-				<h1>Idyllic Wellness Online - Calculator</h1>
+				<h1>Idyllic Wellness Medical Centre <br/> Calculator</h1>
 				<p>
 					Are we able to get Idyllic Wellness Medical Centre running given the
 					overhead, worst-case income projects on the ROI? If yes, let 's not
