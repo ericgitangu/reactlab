@@ -98,7 +98,7 @@ function App() {
 
 	return (
 		<div className='App'>
-      <ToastContainer/>
+			<ToastContainer />
 			<div>
 				<h1>
 					Idyllic Wellness Medical Centre <br /> Calculator
@@ -116,7 +116,13 @@ function App() {
 				</p>
 				<p>
 					{/* add the value of the current total monthly*/}
-					Return (anticipted overhead - worst case scenario) p/m: {overhead}
+					Return (anticipted overhead - worst case scenario) p/m:{' '}
+					{overhead.toLocaleString('en-US', {
+						style: 'currency',
+						currency: 'KES',
+						minimumFractionDigits: 2,
+						maximumFractionDigits: 2,
+					})}
 				</p>
 				<input
 					pattern='[0-9]'
@@ -148,7 +154,7 @@ function App() {
 					/
 				</button>
 				{/* Add the resetInput button */}
-        <br/>
+				<br />
 				<button
 					// @ts-ignore
 					onClick={resetInput}>
