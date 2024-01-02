@@ -13,7 +13,7 @@ function App() {
 	const inputRef = useRef(null);
 	const resultRef = useRef(null);
 	const [result, setResult] = useState(0);
-  const [overhead, setOverHead] = useState(400000);
+	const [overhead, setOverHead] = useState(400000);
 
 	useEffect(() => {
 		// @ts-ignore
@@ -78,9 +78,9 @@ function App() {
 		if (inputRef.current) {
 			// @ts-ignore
 			inputRef.current.value = '0';
-      if(result > overhead){
-        toast.success("We are in the green! Let's get started!")
-      }
+			if (result > overhead) {
+				toast.success("We are in the green! Let's get started!");
+			}
 		}
 	}
 
@@ -97,17 +97,21 @@ function App() {
 		<div className='App'>
 			<div>
 				<h1>Idyllic Wellness Online - Calculator</h1>
-        <p>Are we able to get Idyllic Wellness Medical Centre running given the overhead, worst-case income projects on the ROI? If yes, let 's not waste any more time...</p>
+				<p>
+					Are we able to get Idyllic Wellness Medical Centre running given the
+					overhead, worst-case income projects on the ROI? If yes, let 's not
+					waste any more time...
+				</p>
 			</div>
 			<form>
 				<p ref={resultRef}>
 					{/* add the value of the current total */}
 					Return (anticipted revenue) p/m: {result}
 				</p>
-        <p>
-          {/* add the value of the current total monthly*/}
-          Return (anticipted overhead - worst case scenario) p/m: {overhead}
-        </p>
+				<p>
+					{/* add the value of the current total monthly*/}
+					Return (anticipted overhead - worst case scenario) p/m: {overhead}
+				</p>
 				<input
 					pattern='[0-9]'
 					ref={inputRef}
