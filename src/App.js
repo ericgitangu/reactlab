@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 
 /**
  * Main component for the calculator app.
@@ -19,7 +19,10 @@ function App() {
 		// @ts-ignore
 		inputRef.current.value = '';
 		if (result > overhead) {
-			toast.success("We are in the green! Let's get started!");
+			toast.success("We are in the green! Let's get started!", {
+				position: toast.POSITION.TOP_CENTER,
+				autoClose: 5000,
+			});
 		}
 	}, [result]);
 
@@ -94,8 +97,11 @@ function App() {
 
 	return (
 		<div className='App'>
+      <ToastContainer/>
 			<div>
-				<h1>Idyllic Wellness Medical Centre <br/> Calculator</h1>
+				<h1>
+					Idyllic Wellness Medical Centre <br /> Calculator
+				</h1>
 				<p>
 					Are we able to get Idyllic Wellness Medical Centre running given the
 					overhead, worst-case income projects on the ROI? If yes, let 's not
