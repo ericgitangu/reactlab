@@ -148,6 +148,7 @@ function App() {
 					divide
 				</button>
 				{/* Add the resetInput button */}
+        <br/>
 				<button
 					// @ts-ignore
 					onClick={resetInput}>
