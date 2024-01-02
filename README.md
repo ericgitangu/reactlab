@@ -23,5 +23,4 @@ You’ll gain experience with the following tools and software:
 
 You will be able to leverage the potential of this course to develop new skills, improve productivity, act effectively with data and boost your career.
 
-
 This is a beginner course for learners who would like to prepare themselves for a career in mobile development. To succeed in this course, you do not need prior development experience, only basic internet navigation skills and an eagerness to get started with coding
