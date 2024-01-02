@@ -111,24 +111,28 @@ function App() {
 			</div>
 			<form>
 				<p ref={resultRef}>
+          <strong>
 					{/* add the value of the current total */}
-					Return (anticipted revenue) p/m:{' '}
+					Tota (anticipted revenue) p/m:{' '}
 					{result.toLocaleString('en-US', {
 						style: 'currency',
 						currency: 'KES',
 						minimumFractionDigits: 2,
 						maximumFractionDigits: 2,
 					})}
+          </strong>
 				</p>
 				<p>
+          <strong>
 					{/* add the value of the current total monthly*/}
-					Return (anticipted overhead - worst case scenario) p/m:{' '}
+				  Total (anticipted overhead - worst case scenario) p/m:{' '}
 					{overhead.toLocaleString('en-US', {
 						style: 'currency',
 						currency: 'KES',
 						minimumFractionDigits: 2,
 						maximumFractionDigits: 2,
 					})}
+          </strong>
 				</p>
 				<input
 					pattern='[0-9]'
