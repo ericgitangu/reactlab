@@ -18,7 +18,9 @@ function App() {
 	useEffect(() => {
 		// @ts-ignore
 		inputRef.current.value = '';
-		console.log(`result changed to ${result}`);
+		if (result > overhead) {
+			toast.success("We are in the green! Let's get started!");
+		}
 	}, [result]);
 
 	/**
@@ -78,9 +80,6 @@ function App() {
 		if (inputRef.current) {
 			// @ts-ignore
 			inputRef.current.value = '0';
-			if (result > overhead) {
-				toast.success("We are in the green! Let's get started!");
-			}
 		}
 	}
 
